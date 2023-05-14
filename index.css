@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top-chunk {
+    background-image: url("./static/mountains.jpg");
+    color: white;
+    margin-top: -25px;
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile_pic {
+    display: block;
+    height: 30%;
+    width: 30%;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+#name {
+    align-self: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact a{
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
