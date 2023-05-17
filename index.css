@@ -19,6 +19,12 @@ body, html {
     -ms-overflow-style: none; /*for Internet Explorer, Edge*/
     scrollbar-width: none; /*for Firefox*/
     overflow-y: scroll; 
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 0;
 }
 
 body::-webkit-scrollbar {
@@ -31,14 +37,22 @@ body::-webkit-scrollbar {
     display: grid;
     align-items: center;
     text-align: center;
+    scroll-snap-align: start;
 }
 
 .intro h3{
     font-size: x-large;
 }
 
+.edu {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
 #education {
     text-align: center;
+    padding-top: 5%;
+    /* height: 100vh; */
 }
 
 .occ, .ucsc {
@@ -66,19 +80,16 @@ body::-webkit-scrollbar {
     width: 500px;
 }
 
-/* .top-chunk {
-    margin-top: -25px;
-    margin-left: -10px;
-    margin-right: -10px;
-    display: flex;
-    flex-direction: column;
-} */
+.description ul {
+    font-size: x-large;
+    margin-left: 5%;
+}
+
 #contact {
     text-align: center;
 }
 
 #profile_pic {
-    /* display: block; */
     height: 60%;
     width: 25%;
     border-radius: 20%;
@@ -110,6 +121,12 @@ body::-webkit-scrollbar {
     margin-bottom: 50px;
 }
 
+.container {
+    scroll-snap-align: start;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
 .projects h1 {
     text-align: center;
 }
@@ -124,8 +141,4 @@ body::-webkit-scrollbar {
     width: 90%;
     height: 100%;
     border-radius: 20px;
-}
-
-.description ul {
-    font-size: x-large;
 }

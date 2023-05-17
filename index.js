@@ -1,19 +1,18 @@
+window.addEventListener("mousemove", function (e) {
+  var to_append = document.getElementsByClassName('loader-container')[0];
+  var all = document.getElementsByClassName('loader-container');
 
-// window.addEventListener("scroll", function() {
-//     let intro = document.getElementsByClassName("intro");
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     intro.style.opacity = (intro.height() - scrollTop) / intro.height();
-// });
+  var parent_div = document.createElement('div');
+  parent_div.className = "loader-container";
+  var inner_div = document.createElement('div');
+  inner_div.className = "loader";
+  parent_div.appendChild(inner_div)
+  var d = document.body.appendChild(parent_div);
 
-$(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-  
-    $('intro').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-            opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
-            
-        return opacity;
-      }
-    });
-  });
+  parent_div.style.left = (e.clientX - 50)+'px';
+  parent_div.style.top = (e.clientY - 50)+'px';
+
+  if(document.getElementsByClassName('loader-container').length > 50) {
+    document.body.removeChild(to_append)
+  }
+});
